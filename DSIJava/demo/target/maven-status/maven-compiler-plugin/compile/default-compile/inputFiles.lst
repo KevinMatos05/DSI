@@ -1,16 +1,26 @@
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\Usuario.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\EventoSismico.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\Estado.java
+<<<<<<< HEAD
+=======
+C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\AnalistaDeSismos.java
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\Sismografo.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\SerieTemporal.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\TipoDato.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\ClasificacionSismo.java
+<<<<<<< HEAD
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\Empleado.java
+=======
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\GestorRegistroResultado.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\DetalleMuestraSismica.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\EstacionSismologica.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\controladores\PantallaRegistrarResultadoController.java
+<<<<<<< HEAD
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\EventoSismicoDTO.java
+=======
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\MagnitudRichter.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\modelo\MuestraSismica.java
 C:\Users\Space\Desktop\DSI\DSI\DSIJava\demo\src\main\java\com\example\MainApp.java

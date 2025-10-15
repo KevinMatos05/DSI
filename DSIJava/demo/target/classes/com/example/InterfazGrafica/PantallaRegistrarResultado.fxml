@@ -47,18 +47,26 @@
          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
       </columnConstraints>
+<<<<<<< HEAD
       
+=======
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
       <Label text="Magnitud (valor):" GridPane.rowIndex="0" />
       <TextField fx:id="txtMagnitudValor" disable="true" promptText="Ej: 3.5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
       
       <Label text="Alcance Sismo:" GridPane.rowIndex="1" />
       <ComboBox fx:id="cmbAlcanceSismo" disable="true" maxWidth="Infinity" promptText="Seleccionar Alcance" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<<<<<<< HEAD
       
       <Label text="Origen Generación:" GridPane.rowIndex="2" />
       <ComboBox fx:id="cmbOrigenGeneracion" disable="true" maxWidth="Infinity" promptText="Seleccionar Origen" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       
       <Label text="Clasificación:" GridPane.rowIndex="3" />
       <TextField fx:id="txtClasificacion" disable="true" editable="false" promptText="Calculada por profundidad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+=======
+      <Label text="Origen Generación:" GridPane.rowIndex="2" />
+      <ComboBox fx:id="cmbOrigenGeneracion" disable="true" maxWidth="Infinity" promptText="Seleccionar Origen" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
    </GridPane>
    
    <HBox alignment="CENTER" spacing="10.0">

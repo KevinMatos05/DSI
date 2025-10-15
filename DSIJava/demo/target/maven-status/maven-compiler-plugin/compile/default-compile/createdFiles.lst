@@ -1,12 +1,17 @@
 com\example\modelo\AlcanceSismo.class
 com\example\modelo\ClasificacionSismo.class
 com\example\modelo\MuestraSismica.class
+<<<<<<< HEAD
+=======
+com\example\controladores\PantallaRegistrarResultadoController$2.class
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
 com\example\controladores\PantallaRegistrarResultadoController$1.class
 com\example\modelo\GestorRegistroResultado.class
 com\example\MainApp.class
 com\example\modelo\Usuario.class
 com\example\modelo\Estado.class
 com\example\modelo\OrigenDeGeneracion.class
+<<<<<<< HEAD
 com\example\modelo\Empleado.class
 com\example\modelo\Sesion.class
 com\example\modelo\TipoDato.class
@@ -15,6 +20,16 @@ com\example\modelo\EventoSismicoDTO.class
 com\example\modelo\MagnitudRichter.class
 com\example\modelo\DetalleMuestraSismica.class
 com\example\modelo\EventoSismico.class
+=======
+com\example\controladores\PantallaRegistrarResultadoController$3.class
+com\example\modelo\Sesion.class
+com\example\modelo\TipoDato.class
+com\example\controladores\PantallaRegistrarResultadoController.class
+com\example\modelo\MagnitudRichter.class
+com\example\modelo\DetalleMuestraSismica.class
+com\example\modelo\EventoSismico.class
+com\example\modelo\AnalistaDeSismos.class
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
 com\example\modelo\SerieTemporal.class
 com\example\modelo\Sismografo.class
 com\example\modelo\EstacionSismologica.class
