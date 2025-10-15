@@ -1,6 +1,5 @@
 package com.example.controladores;
 
-import com.example.modelo.GestorRegistroResultado;
 import com.example.modelo.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -55,6 +54,7 @@ public class PantallaRegistrarResultadoController {
 
     @FXML
     public void initialize() {
+        System.out.println("--- El Controlador se ha iniciado correctamente! ---");
         this.gestor = new GestorRegistroResultado();
         configurarTabla();
         cargarCombos();
