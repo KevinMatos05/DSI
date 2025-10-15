@@ -1,39 +1,32 @@
+// Archivo: ClasificacionSismo.java
 package com.example.modelo;
 
 public class ClasificacionSismo {
     private String nombre;
-    private float profundidadDesde; // Interpretado de "tofProfundidadDesde"
-    private float profundidadHasta; // Interpretado de "tofProfundidadHasta"
+    private float kmProfundidadDesde;
+    private float kmProfundidadHasta;
 
-    public ClasificacionSismo(String nombre, float profundidadDesde, float profundidadHasta) {
+    public ClasificacionSismo(String nombre, float desde, float hasta) {
         this.nombre = nombre;
-        this.profundidadDesde = profundidadDesde;
-        this.profundidadHasta = profundidadHasta;
+        this.kmProfundidadDesde = desde;
+        this.kmProfundidadHasta = hasta;
     }
 
-    // Getters
     public String getNombre() {
         return nombre;
     }
 
-    public float getProfundidadDesde() {
-        return profundidadDesde;
+    /**
+     * Comprueba si una profundidad dada (en km) pertenece a esta clasificación.
+     * @param profundidadHipocentro La profundidad del evento sísmico en km.
+     * @return true si la profundidad está dentro del rango, false en caso contrario.
+     */
+    public boolean pertenece(float profundidadHipocentro) {
+        return profundidadHipocentro >= kmProfundidadDesde && profundidadHipocentro < kmProfundidadHasta;
     }
 
-    public float getProfundidadHasta() {
-        return profundidadHasta;
-    }
-
-    // Setters
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setProfundidadDesde(float profundidadDesde) {
-        this.profundidadDesde = profundidadDesde;
-    }
-
-    public void setProfundidadHasta(float profundidadHasta) {
-        this.profundidadHasta = profundidadHasta;
+    @Override
+    public String toString() {
+        return nombre;
     }
 }

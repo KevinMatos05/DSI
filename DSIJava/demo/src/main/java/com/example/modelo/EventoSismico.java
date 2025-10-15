@@ -1,14 +1,9 @@
 package com.example.modelo;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashMap; // Importación necesaria para Map
-import java.util.List;
-import java.util.Map;   // Importación necesaria para Map
-import java.util.Optional;
+import java.util.*;
 
 public class EventoSismico {
-    // ... (atributos y constructor sin cambios) ...
     private LocalDateTime fechaHoraOcurrencia;
     private float latitudEpicentro;
     private float longitudEpicentro;
@@ -26,50 +21,44 @@ public class EventoSismico {
         crearNuevoCambioEstado(estadoInicial, LocalDateTime.now());
     }
     
-    // --- MÉTODO NUEVO QUE SIGUE EL DIAGRAMA ---
-
     /**
-     * Recopila los datos principales del evento sísmico en una sola estructura.
-     * Este método corresponde al getDatosEventoSismico() del diagrama de secuencia.
-     * @return Un Map que contiene los datos del evento.
+     * Implementa el 'getDatosEventoSismico()' del Diagrama de Secuencia.
+     * Recopila los datos que la pantalla necesita en una estructura de Mapa.
+     * @return Un Map que contiene los datos principales del evento.
      */
     public Map<String, Object> getDatosEventoSismico() {
         Map<String, Object> datos = new HashMap<>();
-        // El método llama a sus propios getters internos para recopilar la información
         datos.put("fechaHoraOcurrencia", this.getFechaHoraOcurrencia());
         datos.put("latitudEpicentro", this.getLatitudEpicentro());
         datos.put("longitudEpicentro", this.getLongitudEpicentro());
-        datos.put("longitudHipocentro", this.getLongitudHipocentro());
-        datos.put("valorMagnitud", this.getMagnitud().getValor()); // getValorMagnitud()
-        // También agregamos los otros datos que la pantalla necesita
-        datos.put("magnitudObjeto", this.getMagnitud());
+        datos.put("valorMagnitud", this.getValorMagnitud());
         datos.put("alcanceSismo", this.getAlcanceSismo());
         datos.put("origenDeGeneracion", this.getOrigenDeGeneracion());
         return datos;
     }
 
-    // --- Resto de métodos y getters/setters sin cambios ---
+    public Optional<Estado> obtenerEstadoActual() {
+        return historialDeEstados.stream()
+            .max(Comparator.comparing(CambioEstado::getFechaHoraInicio))
+            .map(CambioEstado::getEstado);
+    }
     
-    public Optional<Estado> getEstadoActual() {
-        return buscarActualCE().map(CambioEstado::getEstado);
-    }
-
-    public void cambiarEstado(Estado nuevoEstado) {
-        LocalDateTime fechaHoraDelCambio = LocalDateTime.now();
-        buscarActualCE().ifPresent(actual -> actual.setFechaHoraFin(fechaHoraDelCambio));
-        crearNuevoCambioEstado(nuevoEstado, fechaHoraDelCambio);
-    }
-
-    private Optional<CambioEstado> buscarActualCE() {
-        return historialDeEstados.stream().filter(CambioEstado::sosActual).findFirst();
+    /**
+     * Corresponde a 'setEstado()' en el diagrama.
+     */
+    public void setEstado(Estado nuevoEstado) {
+        crearNuevoCambioEstado(nuevoEstado, LocalDateTime.now());
     }
 
     private void crearNuevoCambioEstado(Estado estado, LocalDateTime fechaHoraInicio) {
         this.historialDeEstados.add(new CambioEstado(estado, fechaHoraInicio));
     }
 
-    public boolean esAutoDetectado() {
-        return getEstadoActual().map(Estado::esAutoDetectado).orElse(false);
+    /**
+     * Corresponde a 'getValorMagnitud()' en el diagrama.
+     */
+    public float getValorMagnitud() {
+        return this.magnitud != null ? this.magnitud.getValor() : 0.0f;
     }
 
     // --- Getters y Setters ---
@@ -91,9 +80,5 @@ public class EventoSismico {
     public void setAlcanceSismo(AlcanceSismo alcanceSismo) { this.alcanceSismo = alcanceSismo; }
     public List<SerieTemporal> getSeriesTemporales() { return seriesTemporales; }
     public void setSeriesTemporales(List<SerieTemporal> seriesTemporales) { this.seriesTemporales = seriesTemporales; }
-    public List<CambioEstado> getHistorialDeEstados() { return historialDeEstados; }
-    public void setHistorialDeEstados(List<CambioEstado> historialDeEstados) { this.historialDeEstados = historialDeEstados; }
-    public String getLocalizacionGeografica() {
-        return String.format("%.4f, %.4f", this.latitudEpicentro, this.longitudEpicentro);
-    }
+    public String getLocalizacionGeografica() { return String.format("%.4f, %.4f", this.latitudEpicentro, this.longitudEpicentro); }
 }
