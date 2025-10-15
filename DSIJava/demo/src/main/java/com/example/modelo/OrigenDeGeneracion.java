@@ -26,4 +26,10 @@ public class OrigenDeGeneracion {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    @Override
+public String toString() {
+    // Devuelve el nombre que quieres que se muestre en el ComboBox
+    return this.getNombre();
+}
 }
