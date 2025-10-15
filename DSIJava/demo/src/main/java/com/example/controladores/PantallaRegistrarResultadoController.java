@@ -32,6 +32,7 @@ public class PantallaRegistrarResultadoController {
 
     @FXML
     public void initialize() {
+        System.out.println("--- El Controlador se ha iniciado correctamente! ---");
         this.gestor = new GestorRegistroResultado();
         configurarTabla();
         cargarCombos();

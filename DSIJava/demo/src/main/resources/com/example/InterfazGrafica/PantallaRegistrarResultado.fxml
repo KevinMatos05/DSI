@@ -41,12 +41,23 @@
          <Font name="System Bold" size="16.0" />
       </font>
    </Label>
+<<<<<<< HEAD
    
+=======
+<<<<<<< HEAD
+   
+=======
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
+>>>>>>> db759c090780d6f03a7e7857974f1bd7631f6621
    <GridPane hgap="10.0" vgap="8.0">
       <columnConstraints>
          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
       </columnConstraints>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db759c090780d6f03a7e7857974f1bd7631f6621
       
       <Label text="Magnitud (valor):" GridPane.rowIndex="0" />
       <TextField fx:id="txtMagnitudValor" disable="true" promptText="Ej: 3.5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
@@ -61,6 +72,18 @@
       <TextField fx:id="txtClasificacion" disable="true" editable="false" promptText="Calculada por profundidad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
    </GridPane>
    
+<<<<<<< HEAD
+=======
+=======
+      <Label text="Magnitud (valor):" GridPane.rowIndex="0" />
+      <TextField fx:id="txtMagnitudValor" disable="true" promptText="Ej: 3.5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      <Label text="Alcance Sismo:" GridPane.rowIndex="1" />
+      <ComboBox fx:id="cmbAlcanceSismo" disable="true" maxWidth="Infinity" promptText="Seleccionar Alcance" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="Origen Generación:" GridPane.rowIndex="2" />
+      <ComboBox fx:id="cmbOrigenGeneracion" disable="true" maxWidth="Infinity" promptText="Seleccionar Origen" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </GridPane>
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
+>>>>>>> db759c090780d6f03a7e7857974f1bd7631f6621
    <HBox alignment="CENTER" spacing="10.0">
       <Button fx:id="btnActualizarDatos" disable="true" mnemonicParsing="false" onAction="#actualizarDatosEvento" text="Actualizar Datos" />
       <Button fx:id="btnGenerarSismograma" disable="true" mnemonicParsing="false" onAction="#generarSismograma" text="Generar Sismograma" />
@@ -86,4 +109,12 @@
       <Button fx:id="btnRechazar" disable="true" mnemonicParsing="false" onAction="#tomarAccionRechazar" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Rechazar Evento" />
       <Button fx:id="btnSolicitarRevision" disable="true" mnemonicParsing="false" onAction="#tomarAccionSolicitarRevision" text="Solicitar Revisión a Experto" />
    </HBox>
+<<<<<<< HEAD
 </VBox>
+=======
+<<<<<<< HEAD
+</VBox>
+=======
+</VBox>
+>>>>>>> b13daf15a36dbcfc4d0e75e4b96936298d483665
+>>>>>>> db759c090780d6f03a7e7857974f1bd7631f6621
